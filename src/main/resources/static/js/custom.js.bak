@@ -1,0 +1,76 @@
+var app4 = new Vue({
+	el : '#productList',
+	data : {
+		products : [ {
+			name : '木制品',
+			imgPath : 'img/portfolio/app1.jpg',
+			linkPath : 'img/portfolio/app1.jpg',
+			title : '木制品',
+			delay : '0.0s',
+			category : 'filter-app'
+		}, {
+			name : '地毯钉条',
+			imgPath : 'img/portfolio/web3.jpg',
+			linkPath : 'img/portfolio/web3.jpg',
+			title : '地毯钉条',
+			delay : '0.1s',
+			category : 'filter-web'
+		}, {
+			name : '木制品',
+			imgPath : 'img/portfolio/app2.jpg',
+			linkPath : 'img/portfolio/app2.jpg',
+			title : '木制品',
+			delay : '0.2s',
+			category : 'filter-app'
+		}, {
+			name : '地板',
+			imgPath : 'img/portfolio/card2.jpg',
+			linkPath : 'img/portfolio/card2.jpg',
+			title : '地板',
+			delay : '0.0s',
+			category : 'filter-card'
+		}, {
+			name : '地毯钉条',
+			imgPath : 'img/portfolio/web2.jpg',
+			linkPath : 'img/portfolio/web2.jpg',
+			title : '地毯钉条',
+			delay : '0.1s',
+			category : 'filter-web'
+		}, {
+			name : '木制品',
+			imgPath : 'img/portfolio/app3.jpg',
+			linkPath : 'img/portfolio/app3.jpg',
+			title : '木制品',
+			delay : '0.2s',
+			category : 'filter-app'
+		}, {
+			name : '地板',
+			imgPath : 'img/portfolio/card1.jpg',
+			linkPath : 'img/portfolio/card1.jpg',
+			title : '地板',
+			delay : '0.0s',
+			category : 'filter-card'
+		}, {
+			name : '地板',
+			imgPath : 'img/portfolio/card3.jpg',
+			linkPath : 'img/portfolio/card3.jpg',
+			title : '地板',
+			delay : '0.1s',
+			category : 'filter-card'
+		}, {
+			name : '地毯钉条',
+			imgPath : 'img/portfolio/web1.jpg',
+			linkPath : 'img/portfolio/web1.jpg',
+			title : '地毯钉条',
+			delay : '0.2s',
+			category : 'filter-web'
+		} ]
+	},
+	created:function(){
+		var url="fetchProductList";
+		var _self=this;
+		$.get(url,function(data){
+            _self.products = eval(data);
+        })
+	}
+});

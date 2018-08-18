@@ -1,0 +1,88 @@
+.navbar-toggler-icon {
+	display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#navbarHeader{
+	float: left;
+	width:100%;
+	margin-top:18px;
+}
+
+.c-wx {
+    /* display: none; */
+    position: absolute;
+    left: 15px;
+    top: -75px;
+    width: 120px;
+    height: 120px;
+    background-image: url(http://www.newsimg.cn/xl2017/images/wx.png);
+    background-size: 100%;
+}
+
+.bg-black {
+	transition: all 0.5s;
+	background: rgba(0, 0, 0, 0.9);
+}
+#listbox .carousel-item::before {
+	background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.thevideo {
+    top: 0px;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    <!-- -webkit-transform: translate3d(0,0,0); -->
+}
+	
+@media screen and (mix-width: 768px) {
+    .thevideo {
+	    top: 0px;
+	    left: 0;
+	    min-width: 100%;
+	    min-height: 100%;
+	    width: auto;
+	    height: auto;
+	    display: block;
+	    <!-- -webkit-transform: translate3d(0,0,0); -->
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#logo, button {
+		transform:scale(0.8,0.8);
+	}
+    .thevideo {
+	    top: 30px;
+	    left: 0;
+	    min-width: 100%;
+	    min-height: 100%;
+	    width: 100%;
+	    height: auto;
+	    display: block;
+	    <!-- -webkit-transform: translate3d(0,0,0); -->
+	}
+}
+
+@media screen and (max-width: 1024px) {
+    .thevideo {
+	    top: 30px;
+	    left: 0;
+	    min-width: 100%;
+	    min-height: 100%;
+	    width: 100%;
+	    height: auto;
+	    display: block;
+	    <!-- -webkit-transform: translate3d(0,0,0); -->
+	}
+}

@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://root:james%401222@47.89.14.18:27017/jiapengmsg
+
+server:
+    port: 80
+    servlet:
+      context-path: /jiapengwood
+
+logging: 
+  path: C:/logs/jiapengwood
