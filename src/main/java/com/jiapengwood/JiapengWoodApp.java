@@ -17,8 +17,6 @@ public class JiapengWoodApp extends SpringBootServletInitializer{
 		return application.sources(JiapengWoodApp.class);
 	}
 	
-	
-	
 	public static void main(String[] args) {
 		SpringApplication.run(JiapengWoodApp.class, args);
 	}
