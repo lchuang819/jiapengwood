@@ -249,7 +249,7 @@
               <figure>
                 <img v-bind:src="product.imgPath" class="img-fluid" alt="">
                 <a v-bind:href="product.linkPath" data-lightbox="portfolio" :data-title="product.title" class="link-preview" data-i18n-title="preview" title="预览"><i class="ion ion-eye"></i></a>
-                <a href="fetchProduct/1" class="link-details" data-i18n-title="moreDetails" title="详情"><i class="ion ion-android-open"></i></a>
+                <a v-bind:href="'fetchProduct/' + product.productId" class="link-details" data-i18n-title="moreDetails" title="详情"><i class="ion ion-android-open"></i></a>
               </figure>
 
               <div class="portfolio-info">

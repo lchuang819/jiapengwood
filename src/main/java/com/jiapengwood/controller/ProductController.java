@@ -34,7 +34,7 @@ public class ProductController {
 	@RequestMapping(value = "/fetchProduct/{proudctId}", method = RequestMethod.GET, produces="application/json; charset=UTF-8")
 	public ModelAndView fetchProductList(@PathVariable String proudctId) {
 
-		ModelAndView mav = new ModelAndView("redirect:/product.html");
+		ModelAndView mav = new ModelAndView("redirect:/product/carpetGripper/"+proudctId+".html");
 		
 		return mav;
 

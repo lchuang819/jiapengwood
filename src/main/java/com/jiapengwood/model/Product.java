@@ -5,6 +5,8 @@ public class Product {
 	private String name;
 	private String imgPath;
 	private String linkPath;
+	private String productId;
+	private String productLink;
 	private String title;
 	private String delay;
 	private String category;
@@ -31,6 +33,22 @@ public class Product {
 
 	public void setLinkPath(String linkPath) {
 		this.linkPath = linkPath;
+	}
+
+	public String getProductId() {
+		return productId;
+	}
+
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+
+	public String getProductLink() {
+		return productLink;
+	}
+
+	public void setProductLink(String productLink) {
+		this.productLink = productLink;
 	}
 
 	public String getTitle() {
