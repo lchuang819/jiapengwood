@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jiapengwood.model.MessageData;
+import com.jiapengwood.service.MailService;
 import com.jiapengwood.service.MessageService;
 import com.jiapengwood.util.JSONUtils;
 
@@ -20,12 +21,17 @@ public class MessageController {
 	
 	@Autowired
 	MessageService messageService;
+	
+	@Autowired
+	MailService mailService;
 
 	@ResponseBody
     @RequestMapping(value = "/saveMessage", method = RequestMethod.POST)
-	public String saveMessage(MessageData messageData) {
+	public String saveMessage(MessageData messageData) throws Exception {
 
 		logger.debug(JSONUtils.toJSONString(messageData));
+		
+		mailService.sendEmail(messageData);
 		
 		messageService.saveMessage(messageData);
 		
