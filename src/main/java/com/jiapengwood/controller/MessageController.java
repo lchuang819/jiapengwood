@@ -31,9 +31,17 @@ public class MessageController {
 
 		logger.debug(JSONUtils.toJSONString(messageData));
 		
-		mailService.sendEmail(messageData);
+		if("test".equalsIgnoreCase(messageData.getSubject())) {
+			logger.debug("===========Test==========");
+		} else {
+			mailService.sendEmail(messageData);
+		}
 		
-		messageService.saveMessage(messageData);
+		try {
+			messageService.saveMessage(messageData);
+		} catch (Exception e) {
+			logger.error("Exception while saving message into DB:", e);
+		}
 		
 		return "OK";
 	}
