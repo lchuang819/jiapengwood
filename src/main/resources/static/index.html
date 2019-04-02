@@ -53,10 +53,10 @@
           <li><a href="#about" data-i18n-text="aboutUs">关于我们</a></li>
            <li class="menu-has-children"><a href="#portfolio" data-i18n-text="products">我们的产品</a>
             <ul>
-              <li><a href="#" data-i18n-text="portfolio_category_1">实木产品1</a></li>
-              <li><a href="#" data-i18n-text="portfolio_category_2">实木产品2</a></li>
-              <li><a href="#" data-i18n-text="portfolio_category_3">实木产品3</a></li>
-              <li><a href="#" data-i18n-text="portfolio_category_4">实木产品4</a></li>
+              <li><a href="#portfolio" data-i18n-text="portfolio_category_1">实木产品1</a></li>
+              <li><a href="#portfolio" data-i18n-text="portfolio_category_2">实木产品2</a></li>
+              <li><a href="#portfolio" data-i18n-text="portfolio_category_3">实木产品3</a></li>
+              <li><a href="#portfolio" data-i18n-text="portfolio_category_4">实木产品4</a></li>
             </ul>
           </li>
           <li><a href="#team" data-i18n-text="team">我们的团队</a></li>
@@ -246,11 +246,11 @@
 
           <div v-for="product in products" v-bind:class="['col-lg-4', 'col-md-6', 'portfolio-item', product.category, 'wow', 'fadeInUp']" :data-wow-delay="product.delay">
             <div class="portfolio-wrap">
-              <figure>
-                <img v-bind:src="product.imgPath" class="img-fluid" alt="">
-                <a v-bind:href="product.linkPath" data-lightbox="portfolio" :data-title="product.title" class="link-preview" data-i18n-title="preview" title="预览"><i class="ion ion-eye"></i></a>
-                <a v-bind:href="'fetchProduct/' + product.productId" class="link-details" data-i18n-title="moreDetails" title="详情"><i class="ion ion-android-open"></i></a>
-              </figure>
+              	<figure>
+	                <img v-bind:src="product.imgPath" class="img-fluid" alt="">
+	                <a v-bind:href="product.linkPath" data-lightbox="portfolio" :data-title="product.title" class="link-preview" data-i18n-title="preview" title="预览"><i class="ion ion-eye"></i></a>
+	                <a v-if="product.showDetailsLink" v-bind:href="'fetchProduct/' + product.productId + '?productCategory=' + product.productCategory" class="link-details" data-i18n-title="moreDetails" title="详情"><i class="ion ion-android-open"></i></a>
+				</figure>
 
               <div class="portfolio-info">
                 <h4><a href="#">{{ product.name }}</a></h4>
